@@ -294,10 +294,10 @@ public class FourfingerActivity extends Activity  {
             ToastHelper.showMessage(FourfingerActivity.this, "Escaneo Exitoso");
             // Handle exported templates here
             if (results != null && results.size() > 0) {
-                ISVeridiumTracker.trackEvent(getApplicationContext(), "ENTEL AA", "Veridium", "Captura", "Success");
+                ISVeridiumTracker.trackEvent(getApplicationContext(), "ENTEL MAYO", "Veridium", "Captura", "Success");
             }
             else {
-                ISVeridiumTracker.trackEvent(getApplicationContext(), "ENTEL AA", "Veridium", "Captura", "Review");
+                ISVeridiumTracker.trackEvent(getApplicationContext(), "ENTEL MAYO", "Veridium", "Captura", "Review");
             }
 
             byte[] template = null;
@@ -323,7 +323,7 @@ public class FourfingerActivity extends Activity  {
             Intent i = new Intent();
             i.putExtra("status", "Escaneo Fallido");
             setResult(Activity.RESULT_CANCELED, i);
-            ISVeridiumTracker.trackEvent(getApplicationContext(), "ENTEL AA", "Veridium", "Capture", "Error");
+            ISVeridiumTracker.trackEvent(getApplicationContext(), "ENTEL MAYO", "Veridium", "Capture", "Error");
             finish();
         }
 
@@ -334,7 +334,7 @@ public class FourfingerActivity extends Activity  {
             Intent i = new Intent();
             i.putExtra("status", "Escaneo Cancelado");
             setResult(Activity.RESULT_CANCELED, i);
-            ISVeridiumTracker.trackEvent(getApplicationContext(), "ENTEL AA", "Veridium", "Capture", "Cancel");
+            ISVeridiumTracker.trackEvent(getApplicationContext(), "ENTEL MAYO", "Veridium", "Capture", "Cancel");
             finish();
         }
 
@@ -345,7 +345,7 @@ public class FourfingerActivity extends Activity  {
             Intent i = new Intent();
             i.putExtra("status", "Escaneo Erroneo");
             setResult(Activity.RESULT_CANCELED, i);
-            ISVeridiumTracker.trackEvent(getApplicationContext(), "ENTEL AA", "Veridium", "Capture", "Error" + message);
+            ISVeridiumTracker.trackEvent(getApplicationContext(), "ENTEL MAYO", "Veridium", "Capture", "Error" + message);
             finish();
         }
     };
